@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multitool
+  annotations:
+    container1: multitool
+spec:
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: multitool
+      type: backend
+  template:
+    metadata:
+      labels:
+        app: multitool
+        type: backend
+    spec:
+      containers:
+        - name: multitool
+          image: praqma/network-multitool:alpine-extra
+          resources:
+          env:
+            - name: HTTP_PORT
+              value: "80"
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP

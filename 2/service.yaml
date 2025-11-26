@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: two-one
+spec:
+  selector:
+    app: nginx
+  type: NodePort
+  ports:
+    - name: nginx
+      port: 80
+      nodePort: 30111
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: two-two
+spec:
+  selector:
+    app: multitool
+  type: NodePort
+  ports:
+    - name: multitool
+      port: 80
+      nodePort: 30112
