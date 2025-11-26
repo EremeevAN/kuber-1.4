@@ -97,7 +97,7 @@ spec:
 ```
 Проверить доступность изнутри кластера:
 
-![image]
+![image](https://github.com/EremeevAN/kuber-1.4/blob/main/images/1.png)
 
 Создать Service типа NodePort для доступа к nginx снаружи.
 ```yaml
@@ -119,7 +119,9 @@ spec:
 ```
 Проверить доступ с локального компьютера:
 
-![image]
+![image](https://github.com/EremeevAN/kuber-1.4/blob/main/images/2.png)
+
+![image](https://github.com/EremeevAN/kuber-1.4/blob/main/images/3.png)
 
 ### Задание 2: Настройка Ingress
 Развернуть два Deployment:
@@ -256,6 +258,6 @@ spec:
 ```
 Проверить доступность:
 
-![image]
+![image](https://github.com/EremeevAN/kuber-1.4/blob/main/images/4.png)
 
-![image]
+![image](https://github.com/EremeevAN/kuber-1.4/blob/main/images/5.png)
